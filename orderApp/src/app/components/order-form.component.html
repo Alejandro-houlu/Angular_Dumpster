@@ -1,0 +1,50 @@
+<h1>Order</h1>
+
+<form [formGroup]="form" (ngSubmit)="processForm()">
+
+    <table>
+        <thead>
+        <tr>
+            <td>Name:</td>
+            <td>
+                <input type="text" name="name" id="name" size="30" formControlName="name">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Mobile:</td>
+            <td>
+                <input type="tel" name="tel" id="tel" size="30" formControlName="mobile">
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><button type="submit">Save</button></td>
+
+        </tr>
+        </thead>
+
+        <tbody formArrayName="items">
+        <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th> <button type="button">Add</button></th>
+        </tr>
+        <tr *ngFor="let t of itemArrCtrl.controls; let i = index;" [formGroup]="t">
+            <td>
+                <input type="text" name="itemName" id="itemName" formControlName="item">
+            </td>
+            <td>
+                <input type="number" name="itemQty" id="itemQty" min="1" formControlName="quantity">
+            </td>
+
+            <td>
+                <button type="button"> X </button>
+          </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+</form>
