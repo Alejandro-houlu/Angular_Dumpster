@@ -23,6 +23,7 @@ export class AppComponent implements OnInit {
     this.regSvc.newRegistration(registration)
       .then(result=>{
         console.info(">>>>>Result: ", result)
+        alert(`Registration: ${result}`)
       })
       .catch(error=>{
         console.error(">>>>>Error: ",error)
