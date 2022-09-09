@@ -9,7 +9,7 @@ export class RegistrationService{
 
     newRegistration(registration: Registration): Promise<Response>{
 
-        const URL = "http://localhost:8080/api/registration"
+        const URL = "https://gentle-fjord-39219.herokuapp.com/api/registration"
 
         const headers = new HttpHeaders()
             .set('Content-Type','application/json')
