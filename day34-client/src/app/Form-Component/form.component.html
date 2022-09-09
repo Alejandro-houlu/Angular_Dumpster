@@ -1,0 +1,26 @@
+
+
+<form [formGroup]="form"  (ngSubmit)="processForm()">
+    <div>
+        <table>
+            <tr>
+                <td>Name: </td>
+                <td>
+                    <input type="text" name="name" id="name" formControlName="name">
+                </td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>
+                    <input type="text" name="email" id="email" formControlName="email">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit" [disabled]="form.invalid">Register</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>
