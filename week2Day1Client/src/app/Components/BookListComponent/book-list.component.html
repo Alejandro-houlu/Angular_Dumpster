@@ -1,0 +1,6 @@
+
+<ul>
+  <li *ngFor="let b of books;" >
+    <button type="button" (click)="getBook(b.bookId)">{{ b.title }}</button> 
+  </li>
+</ul>
